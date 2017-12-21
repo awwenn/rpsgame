@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rock, paper, scissors</title>
+  </head>
+  <body>
+    <script>
+
+      function computerPlay() {
+
+        let randomSelection = Math.random();
+
+        if (randomSelection <= 0.33) {
+          return "paper";
+        } else if (randomSelection <= 0.66) {
+          return "rock";
+        } else if (randomSelection <= 1) {
+          return "scissors";
+        }
+      }
+
+      function playRound(playerSelection, computerSelection) {
+
+        if (computerSelection == "paper") {
+          return "It's a tie!";
+        } else if (computerSelection == "rock") {
+          return "You lose!";
+        } else if (computerSelection == "scissors") {
+          return "You win!";
+        }
+      }
+
+
+      let playerSelection = "paper";
+      let computerSelection = computerPlay();
+
+      console.log(playRound(playerSelection, computerSelection));
+    </script>
+  </body>
+</html>
